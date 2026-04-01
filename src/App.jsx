@@ -3,7 +3,7 @@ import axios from "axios";
 import GlobeView from "./components/Globe";
 import NewsPanel from "./components/NewsPanel";
 
-const API_BASE = "http://localhost:8000/api";
+const API_BASE = import.meta.env.VITE_API_URL || "https://news-update-backend.vercel.app/api";
 
 export default function App() {
   const globeRef = useRef();
